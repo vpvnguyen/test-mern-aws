@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      frontend
+      React - Web Frontend. This is where you need to be. If you see this, you have properly routed Express to React App. GJ.
     </div>
   );
 }

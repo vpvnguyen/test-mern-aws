@@ -9,16 +9,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // serve static files if env is production
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+app.use(express.static("client/build"));
 
 app.get("*", (req, res) => {
-  res.send('yo');
-  // res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-app.listen(PORT, (err) => {
+app.listen(PORT, '172.31.29.234', (err) => {
   if (err) throw err;
   console.log(`Express listening on ${PORT}`);
 }); 
